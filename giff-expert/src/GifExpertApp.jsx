@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifFrid } from './components/GifFrid';
+import { AddCategory, GifFrid} from './components';
 
 export const GifExpertApp = () => {
 
@@ -11,7 +10,7 @@ export const GifExpertApp = () => {
 // si la categoria que metemos exite, no hace nada. si no exite la incorpora.
         if ( categories.includes(newCategory)) return;
 
-        setCategories([ ...categories, newCategory]);
+        setCategories([ newCategory, ...categories, ]);
     }
 
   return (
